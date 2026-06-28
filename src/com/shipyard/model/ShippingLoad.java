@@ -4,7 +4,7 @@ package com.shipyard.model;
 public class ShippingLoad {
     private String loadId;
     private String description;
-    private boolean weightKg;
+    private double weightKg;
     private boolean hazardous;
     private boolean requiresRefrigeration;
     private boolean international;
@@ -15,7 +15,7 @@ public class ShippingLoad {
     public ShippingLoad() {
     }
 
-    public ShippingLoad(String loadId, String description, boolean weightKg, boolean hazardous, boolean requiresRefrigeration, boolean international, boolean urgent, String origin, String destination) {
+    public ShippingLoad(String loadId, String description, double weightKg, boolean hazardous, boolean requiresRefrigeration, boolean international, boolean urgent, String origin, String destination) {
         this.loadId = loadId;
         this.description = description;
         this.weightKg = weightKg;
@@ -43,11 +43,11 @@ public class ShippingLoad {
         this.description = description;
     }
 
-    public boolean isWeightKg() {
+    public double getWeightKg() {
         return weightKg;
     }
 
-    public void setWeightKg(boolean weightKg) {
+    public void setWeightKg(double weightKg) {
         this.weightKg = weightKg;
     }
 
