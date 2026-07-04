@@ -29,7 +29,7 @@ A note on the word "stream": here it means a *logical processing Lane* (a queue 
 
 ```mermaid
 flowchart LR
-  P["DispatcherApp<br/>(producer)"] --> | "routing key: incoming" | IX{{"shipyard.ingest<br/>(direct)"}}
+  P["DispatcherApp<br/>(producer)"] --> |"routing key: incoming"| IX{{"shipyard.ingest<br/>(direct)"}}
   IX --> VQ[("load.verification")]
   VQ --> V["VerifierApp<br/>(classify + route)"]
 
